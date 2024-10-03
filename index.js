@@ -14,7 +14,7 @@ let customRetryAfterHeader;
 
 const rateLimiter = rateLimit({
     windowMs: 1 * 10 * 1000,
-    max: 8,
+    max: 10,
     handler: function (req, res, next, options) {
         console.log(`${new Date().toISOString()}:\tRate limit exceeded for request: ${req.hostname}`);
 
